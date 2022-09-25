@@ -39,3 +39,9 @@ function enterNewNote(body, notesArray) {
 
     return newNote;
 };
+
+app.post('/api/notes', (req, res) => {
+    const newNote = enterNewNote(req.body, noteReq);
+    res.json(noteReq);
+});
+
